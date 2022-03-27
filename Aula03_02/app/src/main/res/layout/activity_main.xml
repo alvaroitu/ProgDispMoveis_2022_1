@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="100px"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:id="@+id/linearLayout"
+            android:layout_marginTop="76dp"
+            app:layout_constraintHorizontal_bias="0.0">
+
+        <EditText
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:text=""
+                android:ems="10"
+                android:id="@+id/editTextTextPersonName"
+                tools:layout_editor_absoluteY="59dp"
+                tools:layout_editor_absoluteX="18dp"/>
+        <EditText
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:text=""
+                android:ems="10"
+                android:id="@+id/editTextTextPersonName2"
+                tools:layout_editor_absoluteY="119dp"
+                tools:layout_editor_absoluteX="20dp"/>
+    </LinearLayout>
+    <LinearLayout
+            android:layout_width="319dp"
+            android:layout_height="79dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+            app:layout_constraintHorizontal_bias="0.0" android:layout_marginTop="32dp" android:id="@+id/linearLayout2"
+            android:layout_marginStart="32dp">
+        <Button
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:text="+"
+                android:layout_height="wrap_content"
+                android:id="@+id/adicao"
+                tools:layout_editor_absoluteY="213dp"
+                tools:layout_editor_absoluteX="16dp"/>
+        <Button
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:text="-"
+                android:layout_height="wrap_content"
+                android:id="@+id/subtracao"
+                tools:layout_editor_absoluteY="213dp"
+                tools:layout_editor_absoluteX="124dp"/>
+        <Button
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:text="*"
+                android:layout_height="wrap_content"
+                android:id="@+id/multiplicacao"
+                tools:layout_editor_absoluteY="213dp"
+                tools:layout_editor_absoluteX="230dp"/>
+        <Button
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:text="/"
+                android:layout_height="wrap_content"
+                android:id="@+id/divisao"
+                tools:layout_editor_absoluteY="267dp"
+                tools:layout_editor_absoluteX="287dp"/>
+
+    </LinearLayout>
+    <TextView
+            android:text="Resultado"
+            android:gravity="center"
+            android:layout_width="124dp"
+            android:layout_height="64dp"
+            android:id="@+id/textView"
+            android:layout_marginTop="60dp"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
+            android:layout_marginEnd="98dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="98dp"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
