@@ -7,9 +7,89 @@
         android:layout_height="match_parent"
         tools:context=".MainActivity">
     <Button
-            android:text="Salvar"
+            android:text="Pesquisar"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" android:id="@+id/salvar"
+            android:layout_height="wrap_content" android:id="@+id/botaoPesquisar"
             tools:layout_editor_absoluteX="106dp"
-            app:layout_constraintTop_toTopOf="parent" android:layout_marginTop="122dp"/>
+            android:layout_marginTop="6dp" app:layout_constraintTop_toBottomOf="@+id/pesquisar"/>
+    <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/pesquisar"
+            tools:layout_editor_absoluteX="52dp" android:hint="pesquisar"
+            android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="@+id/botaoInserir"/>
+    <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/nome"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="4dp" android:hint="nome" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="4dp"/>
+    <EditText
+            android:layout_width="70dp"
+            android:layout_height="45dp"
+            android:inputType="number"
+            android:ems="10"
+            android:id="@+id/idade"
+            android:hint="idade" android:layout_marginEnd="4dp"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="4dp"/>
+    <Button
+            android:text="Inserir"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:id="@+id/botaoInserir"
+            tools:layout_editor_absoluteX="107dp" android:layout_marginTop="6dp"
+            app:layout_constraintTop_toBottomOf="@+id/idade"/>
+    <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:ems="10"
+            android:id="@+id/idAtualizar"
+            tools:layout_editor_absoluteX="53dp" android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/botaoPesquisar" android:hint="id atualizar"/>
+    <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/novoNome"
+            android:hint="nome" android:layout_marginTop="6dp"
+            app:layout_constraintTop_toBottomOf="@+id/idAtualizar" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="4dp"/>
+    <EditText
+            android:layout_width="70dp"
+            android:layout_height="45dp"
+            android:inputType="number"
+            android:ems="10"
+            android:id="@+id/novaIdade"
+            android:hint="idade"
+            android:layout_marginTop="4dp" app:layout_constraintTop_toBottomOf="@+id/idAtualizar"
+            android:layout_marginEnd="4dp" app:layout_constraintEnd_toEndOf="parent"/>
+    <Button
+            android:text="Atualizar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:id="@+id/botaoAtualizar"
+            tools:layout_editor_absoluteX="102dp" android:layout_marginTop="6dp"
+            app:layout_constraintTop_toBottomOf="@+id/novaIdade"/>
+    <EditText
+            android:layout_width="106dp"
+            android:layout_height="46dp"
+            android:inputType="number"
+            android:ems="10"
+            android:id="@+id/idDeletar"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="8dp" app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="32dp" android:hint="id deletar"/>
+    <Button
+            android:text="Deletar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/botaoDeletar"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="32dp"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
