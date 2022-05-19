@@ -42,18 +42,14 @@ public class MainActivity extends AppCompatActivity {
                     SQLiteDatabase bancoDados = openOrCreateDatabase("app", MODE_PRIVATE, null);
 
                     //criar tabela / remover tabale
-                    bancoDados.execSQL("CREATE TABLE IF NOT EXISTS pessoas (id INTEGER PRIMARY KEY AUTOINCREMENT, nome VARCHAR, idade INT(3))");
+                    bancoDados.execSQL("CREATE TABLE IF NOT EXISTS pessoas " +
+                            "(id INTEGER PRIMARY KEY AUTOINCREMENT, nome VARCHAR, idade INT(3))");
                     //bancoDados.execSQL("DROP TABLE pessoas");
 
                     //inserindo registros
-//                    bancoDados.execSQL("INSERT INTO pessoas(nome, idade) VALUES('Karen', 55)");
-//                    bancoDados.execSQL("INSERT INTO pessoas(nome, idade) VALUES('Kevin', 25)");
-//                    bancoDados.execSQL("INSERT INTO pessoas(nome, idade) VALUES('Samanta', 35)");
-//                    bancoDados.execSQL("INSERT INTO pessoas(nome, idade) VALUES('Alvaro', 40)");
-//                    bancoDados.execSQL("INSERT INTO pessoas(nome, idade) VALUES('Joao', 65)");
-//                    bancoDados.execSQL("INSERT INTO pessoas(nome, idade) VALUES('Jose', 75)");
-//                    bancoDados.execSQL("INSERT INTO pessoas(nome, idade) VALUES('Priscila', 20)");
-                    bancoDados.execSQL("INSERT INTO pessoas(nome, idade) VALUES('" + nomeInserido + "', '" + idadeInserida + "')");
+//
+                    bancoDados.execSQL("INSERT INTO pessoas(nome, idade) " +
+                            "VALUES('" + nomeInserido + "', '" + idadeInserida + "')");
 
                     //mostrar o dados
                     String consulta = "SELECT * FROM pessoas";
@@ -93,9 +89,7 @@ public class MainActivity extends AppCompatActivity {
                     SQLiteDatabase bancoDados = openOrCreateDatabase("app", MODE_PRIVATE, null);
 
                     //filtrar/recuperar o dados
-                    //String consulta = "SELECT * FROM pessoas";
-                    //String consulta = "SELECT * FROM pessoas WHERE idade = 30";
-                    //String consulta = "SELECT * FROM pessoas WHERE nome LIKE '%ka%'";
+
                     String consulta = "SELECT * FROM pessoas WHERE nome LIKE '%" + valorPesquisado + "%'";
                     Cursor cursor = bancoDados.rawQuery(consulta, null);
 
